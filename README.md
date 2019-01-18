@@ -1,6 +1,6 @@
 #Usage
 
-docker run -it --rm -p 5901:5901 -e USER=root babim/oraclelinux6-gui
+docker run -it --rm -p 5901:5901 -e USER=root babim/oraclelinuxbase:6.gui
 
 attach container and enter vnc password (first run)
 
