@@ -1,4 +1,9 @@
-[![](https://images.microbadger.com/badges/image/babim/oraclelinux6base.svg)](https://microbadger.com/images/babim/oraclelinux6base "Get your own image badge on microbadger.com")[![](https://images.microbadger.com/badges/version/babim/oraclelinux6base.svg)](https://microbadger.com/images/babim/oraclelinux6base "Get your own version badge on microbadger.com")
-[![](https://images.microbadger.com/badges/image/babim/oraclelinux6base:ssh.svg)](https://microbadger.com/images/babim/oraclelinux6base:ssh "Get your own image badge on microbadger.com")[![](https://images.microbadger.com/badges/version/babim/oraclelinux6base:ssh.svg)](https://microbadger.com/images/babim/oraclelinux6base:ssh "Get your own version badge on microbadger.com")
+#Usage
 
-# docker-oraclelinux6base
+docker run -it --rm -p 5901:5901 -e USER=root babim/oraclelinux6-gui
+
+attach container and enter vnc password (first run)
+
+Connect to vnc://<host>:5901 via VNC client.
+
+Change password over vncpasswd command in container
