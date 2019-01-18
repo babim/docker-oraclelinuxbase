@@ -1,2 +1,1 @@
-# docker-oraclelinuxbase
-Oracle linux on docker
+# babim/oraclelinuxbase
