@@ -3,14 +3,10 @@ FROM oraclelinux:7-slim
 # ----------
 MAINTAINER babim <babim@matmagoc.com>
 
-RUN rm -f /etc/motd && \
-    echo "---" > /etc/motd && \
-    echo "Support by Duc Anh Babim. Contact: babim@matmagoc.com" >> /etc/motd && \
-    echo "---" >> /etc/motd && \
-    touch "/(C) Babim"
-    
-RUN yum install locales wget nano iputils openssh-server -y && yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm && \
-    yum clean all
+RUN yum install locales curl nano bash openssh-server -y
+
+# copyright and timezone
+RUN curl -s https://raw.githubusercontent.com/babim/docker-tag-options/master/z%20SCRIPT%20AUTO/copyright.sh | bash
 
 RUN ssh-keygen -q -N "" -t dsa -f /etc/ssh/ssh_host_ecdsa_key && \
     ssh-keygen -q -N "" -t rsa -f /etc/ssh/ssh_host_rsa_key && \
@@ -23,6 +19,3 @@ ENV AUTHORIZED_KEYS **None**
 
 EXPOSE 22
 CMD ["/usr/sbin/runssh.sh"]
-
-ENV LC_ALL en_US.UTF-8
-ENV TZ Asia/Ho_Chi_Minh
