@@ -1,4 +1,4 @@
-FROM oraclelinux:7-slim
+FROM oraclelinux:8-slim
 # Maintainer
 # ----------
 MAINTAINER babim <babim@matmagoc.com>
