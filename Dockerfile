@@ -3,7 +3,7 @@ FROM oraclelinux:8-slim
 # ----------
 MAINTAINER babim <babim@matmagoc.com>
 
-RUN dnf install curl nano bash -y
+RUN microdnf install curl nano bash -y
 
 # copyright and timezone
 RUN curl -s https://raw.githubusercontent.com/babim/docker-tag-options/master/z%20SCRIPT%20AUTO/copyright.sh | bash
